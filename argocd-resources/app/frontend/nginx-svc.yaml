@@ -9,5 +9,6 @@ spec:
     app: web
   ports:
     - protocol: TCP
-      port: 8888
+      port: 80
       targetPort: 80
+      nodePort: 30082
