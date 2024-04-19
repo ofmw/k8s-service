@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: web
-          image: ofmw/frontend:latest
+          image: frontend:latest
           ports:
             - containerPort: 80
