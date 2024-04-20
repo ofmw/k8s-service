@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: was
-          image: ofmw/backend:2404200325_13
+          image: ofmw/backend:2404200334_14
           ports:
             - containerPort: 8080
