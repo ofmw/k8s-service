@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-server
+  labels:
+    app: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      name: frontend-server
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: web
+          image: ofmw/frontend:2404190747_16
+          ports:
+            - containerPort: 80
