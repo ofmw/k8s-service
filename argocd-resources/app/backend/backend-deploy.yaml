@@ -5,7 +5,6 @@ metadata:
   labels:
     app: was
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: was
@@ -17,6 +16,11 @@ spec:
     spec:
       containers:
         - name: was
-          image: ofmw/backend:2404200338_15
+          image: jjj920217/backend:2404230621_2
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 300m

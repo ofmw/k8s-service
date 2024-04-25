@@ -5,7 +5,6 @@ metadata:
   labels:
     app: web
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: web
@@ -17,6 +16,11 @@ spec:
     spec:
       containers:
         - name: web
-          image: ofmw/frontend:2404190747_16
+          image: jjj920217/frontend:2404230620_10
           ports:
             - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+            limits:
+              cpu: 150m
